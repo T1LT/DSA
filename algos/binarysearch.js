@@ -14,7 +14,7 @@
 
 const binarysearch = (arr, target, low = 0, high = arr.length - 1) => {
   if (high >= low) {
-    mid = Math.floor((low + high) / 2);
+    let mid = Math.floor((low + high) / 2);
     if (arr[mid] === target) return mid;
     else if (arr[mid] > target) return binarysearch(arr, target, low, mid - 1);
     else return binarysearch(arr, target, mid + 1, high);
