@@ -34,19 +34,19 @@ class _Queue extends Map {
   }
 }
 
-var rightSideView = function (root) {
-  if (!root) return [];
-  const res = {};
+var rightSideView = function(root) {
+  const res = [];
   const queue = new _Queue();
-  queue.enqueue([root, 0]);
+  if (!root) return res;
+  queue.enqueue(root);
   while (queue.size) {
-    const [curr, level] = queue.dequeue();
-    res[level] = curr.val;
-    if (curr.left) queue.enqueue([curr.left, level + 1]);
-    if (curr.right) queue.enqueue([curr.right, level + 1]);
+    let size = queue.size;
+    for (let i = 0; i < size; i++) {
+      let n = queue.dequeue();
+      if (i === size - 1) res.push(n.val);
+      if (n.left) queue.enqueue(n.left);
+      if (n.right) queue.enqueue(n.right);
+    }
   }
-  return Object.values(res);
+  return res;
 };
-
-// TC: O(n) where n is the number of nodes in the tree
-// SC: O(n) where n is the number of nodes in the tree
