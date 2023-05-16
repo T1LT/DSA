@@ -15,8 +15,7 @@
 
 // ITERATIVE VERSION:
 var inorderTraversal = function (root) {
-  const res = [],
-    stack = [];
+  const res = [], stack = [];
   if (!root) return res;
   while (true) {
     while (root) {
