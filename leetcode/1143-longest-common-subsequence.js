@@ -5,7 +5,7 @@
  * @param {string} text2
  * @return {number}
  */
-https: var longestCommonSubsequence = function (
+var longestCommonSubsequence = function (
   text1,
   text2,
   i = 0,
