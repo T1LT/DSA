@@ -3,11 +3,12 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(nums, target) {
-  let l = 0, r = nums.length - 1;
-  while (l < r) {
-    if (nums[l] + nums[r] === target) return [l + 1, r + 1];
-    else if (nums[l] + nums[r] > target) r--;
-    else l++;
+var twoSum = function (nums, target) {
+  let i = 0,
+    j = nums.length - 1;
+  while (i < j) {
+    if (nums[i] + nums[j] > target) j--;
+    else if (nums[i] + nums[j] < target) i++;
+    else return [i + 1, j + 1];
   }
 };
