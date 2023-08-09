@@ -11,10 +11,7 @@ var characterReplacement = function (s, k) {
   for (let r = 0; r < s.length; r++) {
     count[s[r]] = (count[s[r]] || 0) + 1;
     maxCount = Math.max(maxCount, count[s[r]]);
-    while (r - l + 1 - maxCount > k) {
-      count[s[l]]--;
-      l++;
-    }
+    if (r - l + 1 - maxCount > k) count[s[l++]]--;
     res = Math.max(res, r - l + 1);
   }
   return res;
