@@ -1,7 +1,7 @@
 // a set of vertices and edges
 
 // adjacency list
-const graph = { 1: [2, 5], 2: [1, 3, 4], 3: [2, 4], 4: [2, 3], 5: [1] };
+// const graph = { 1: [2, 5], 2: [1, 3, 4], 3: [2, 4], 4: [2, 3], 5: [1] };
 
 // list of edges
 // matrix
@@ -13,6 +13,8 @@ const graph = { 1: [2, 5], 2: [1, 3, 4], 3: [2, 4], 4: [2, 3], 5: [1] };
 // 3 [ [0,1,0,1,0] ]
 // 4 [ [0,1,1,0,0] ]
 // 5 [ [1,0,0,0,0] ]
+
+// const DIRS = [[0,1], [0,-1], [1,0], [-1,0]];
 
 const dfs = (graph, vertex, visited = new Set()) => {
   if (visited.has(vertex)) return;
@@ -47,4 +49,4 @@ const bfs = (graph, vertex) => {
 };
 
 // dfs(graph, 1);
-bfs(graph, 1);
+// bfs(graph, 1);
