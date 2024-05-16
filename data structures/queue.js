@@ -24,7 +24,7 @@ const queue = [];
 
 //   dequeue() {
 //     const el = this.get(this.removalIdx);
-//     if (typeof el !== undefined) {
+//     if (typeof el !== "undefined") {
 //       this.delete(this.removalIdx);
 //       this.removalIdx++;
 //     }
